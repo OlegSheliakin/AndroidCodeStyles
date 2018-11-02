@@ -22,7 +22,7 @@
 | item_search_user 	| -				| search 	| user    		|
 | partial_progress 	| - 			| - 		| progress    	|
 
-<br/> `item` - элемент списка RecyclerView или ListView
+<br> `item` - элемент списка RecyclerView или ListView
 
 `partial` используется для layout, которые добавляются в другие файлы layout (например, через тэг `include`)
 
@@ -76,7 +76,7 @@ ID элементов верстки должны соответствовать
 | text_description	| text 		| description 	|
 | recycler_users	| recycler  | users  		|
 
-<br/> При использовании `kotlin-android-extensions` допускается использование `lowerCamelCase` вместо `lowercase_underscope`
+<br> При использовании `kotlin-android-extensions` допускается использование `lowerCamelCase` вместо `lowercase_underscope`
 
 ID элементов меню должны соответствовать паттерну - `menu_%description%`. Пример: `menu_done`, `menu_settings` и т.д.
 
@@ -100,16 +100,16 @@ ID элементов меню должны соответствовать па�
 
 #### 1.2.3 Стили
 
-Названия стилей должны соответствовать `UpperCamelCase` и паттерну `%Feature%.%Component%.%Type%.%Description%`.
+Названия стилей должны соответствовать `UpperCamelCase` и паттерну `%Feature%%Component%%Type%%Description%`.
 
 Пример:
 
 | Full name      			| Feature		| Component	| Type  	| Description	|
 |-|-|-|-|-|
-| Login.Button.SignIn     	| Login 		| - 		| Button 	| SignIn		|
-| Search.EditText.Users		| Search 		| - 		| EditText 	| Users			|
-| Splash.Theme				| Splash     	| - 		| Theme  	| -				|
-| Dialog.Button.Positive	| -      		| Dialog 	| Button  	| Positive		|
+| LoginButtonSignIn     	| Login 		| - 		| Button 	| SignIn		|
+| SearchEditTextUsers		| Search 		| - 		| EditText 	| Users			|
+| SplashTheme				| Splash     	| - 		| Theme  	| -				|
+| DialogButtonPositive	    | -      		| Dialog 	| Button  	| Positive		|
 
 #### 1.2.4 Цвета
 
@@ -132,9 +132,22 @@ ID элементов меню должны соответствовать па�
 | Full name      			| Feature   | Component	| Dimen type    | Description   |
 |-|-|-|-|-|
 | margin_small              | -         | -         | margin 	    | small         |
-| text_size_big		        | - 	    | text 		| size 	        | big           |
-| padding_6dp	            | -         | - 	    | padding  	    | 6dp           |
+| text_size_big		        | - 	    | - 		| text_size     | big           |
 | download_progress_size    | download  | progress 	| size  	    | -             |
+
+<br> Стандартные размеры для отступов и текста
+
+```xml
+    <dimen name="margin_extra_small">4dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_normal">16dp</dimen>
+    <dimen name="margin_high">24dp</dimen>
+    <dimen name="margin_extra_high">32dp</dimen>
+    
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_normal">14sp</dimen>
+    <dimen name="text_size_high">16sp</dimen>
+```
 
 ### 1.3 Порядок атрибутов элемента XML
 
@@ -188,22 +201,22 @@ ID элементов меню должны соответствовать па�
 
 1. Блок companion object
 2. Поля:
-<br/> 1. abstract
-<br/> 2. override
-<br/> 3. public
-<br/> 4. internal
-<br/> 5. protected
-<br/> 6. private
+<br> 1. abstract
+<br> 2. override
+<br> 3. public
+<br> 4. internal
+<br> 5. protected
+<br> 6. private
 3. Блок init
 4. Конструкторы (по степени увеличения кол-ва параметров)
 5. Методы:
-<br/> 1. Абстрактные методы
-<br/> 2. Переопределенные методы родительского класса (в порядке следования их в родительском классе)
-<br/> 3. Методы интерфейсов (в порядке наследования интерфейсов и в порядке следования методов в интерфейсах)
-<br/> 4. public
-<br/> 5. internal
-<br/> 6. protected
-<br/> 7. private
+<br> 1. Абстрактные методы
+<br> 2. Переопределенные методы родительского класса (в порядке следования их в родительском классе)
+<br> 3. Методы интерфейсов (в порядке наследования интерфейсов и в порядке следования методов в интерфейсах)
+<br> 4. public
+<br> 5. internal
+<br> 6. protected
+<br> 7. private
 6. Вложенные классы
 
 ### 2.3 Порядок указания модификаторов
