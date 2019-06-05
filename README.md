@@ -1,4 +1,4 @@
-# S Media Link Android Style Guide
+# Android Style Guide
 
 ## 1 Android
 
